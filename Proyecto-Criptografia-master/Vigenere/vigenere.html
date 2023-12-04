@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="vigenere.css">
+  <title>Vigenere</title>
+</head>
+
+<body>
+  <header>
+    <h1>Grupo 7</h1>
+  </header>
+
+  <nav>
+      <a href="../index.html">Inicio</a>
+  </nav>
+
+  <main>
+    <h1>Cifrado de Vigenere</h1>
+    <h2>Cifrar</h2>
+    <form class="form-inline" onsubmit="cifrar(event)">
+      <label>Mensaje
+        <input id="mensaje" class="form-control" type="text" pattern="[A-Z]+" placeholder="Introduce el mensaje..." autofocus required>
+      </label>
+      <label>Clave
+        <input id="clave" class="form-control" type="text" pattern="[A-Z]+" placeholder="Introduce la clave..." required>
+      </label>
+      <button type="submit" class="btn btn-default">Cifrar</button>
+    </form>
+    <div id="resultado1" class="resultado"></div>
+    <br /><br /><br />
+    <h2>Descifrar</h2>
+    <form class="form-inline" onsubmit="descifrar(event)">
+      <label>Mensaje cifrado
+        <input id="mensaje_cif" class="form-control" type="text" pattern="[A-Z]+" placeholder="Introduce el mensaje..." autofocus required>
+      </label>
+      <label>Clave
+        <input id="clave2" class="form-control" type="text" pattern="[A-Z]+" placeholder="Introduce la clave..." required>
+      </label>
+      <button type="submit" class="btn btn-default">Descifrar</button>
+    </form>
+    <div id="resultado2" class="resultado"></div>
+  </main>
+  
+  <footer>
+  </footer>
+  
+   <script src="vigenere.js"></script>
+</body>
+</html>
