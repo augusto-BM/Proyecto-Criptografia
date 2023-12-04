@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de Encriptacion</title>
+</head>
+<body>
+    <h1>BEAUFORT</h1>
+    <h3>Mensaje en claro</h3>
+    <textarea name="" id="txtMensaje" cols="100" rows="10"></textarea>
+
+    <h3>Llave</h3>
+    <textarea name="" id="txtLlave" cols="100" rows="10"></textarea>
+
+    <h3>Criptograma</h3>
+    <textarea name="" id="txtCripto" cols="100" rows="10"></textarea>
+    <br>
+    <h3>Alfabeto</h3>
+    <select name="" id="slcIdioma">
+        <option value="0">ingles</option>
+        <option value="1">español</option>
+    </select>
+
+    <button id="btnEncriptar" onclick="encriptarBeaufort()">Encriptar</button>
+    <button id="btnDesencriptar" onclick="desencriptarBeaufort()">Desencriptar</button>
+    <button id="btnBorrar" onclick="Borrar()">Borrar casillas</button>
+
+    <script src="beaufort.js"></script>
+</body>
+</html>
