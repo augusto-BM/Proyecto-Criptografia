@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="principal/index.css">
+  <link rel="stylesheet" type="text/css" href="principal/header.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Proyecto final - criptografia I</title>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><b>GRUPO 7</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="./index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contactenos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- ---------------------------------------------------------------------------------------------------->
+
+  <!-- CARRUCEL -->
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="./principal/Images/carrucel1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src=".principal/Images/carrucel2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./principal/Images/images.jfif" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="titutlo-a"><h5 class="titulo-criptografia">CRIPTOGRAFIA I<br><i>Elije que algoritmo de encriptacion vas a utilizar.</i></h1></div>
+  <!-- ---------------------------------------------------------------------------------------------------->
+
+  <!-- CARDS DE CIFRADOS -->
+  <div class="container py-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+      <div class="col">
+        <div class="card" >
+          <img src="principal/Images/Vigenere.jfif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">VIGENERE</h5>
+            <p class="card-text">Fue inventado por el criptógrafo francés Blaise de Vigenère en el siglo XVI y es considerado uno de los primeros ejemplos de cifrado polialfabético.</p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+              <a class="btn btn-primary" href="Vigenere/vigenere.html">Calcular</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="principal/Images/cesar.jfif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CESAR</h5>
+            <p class="card-text">Es un cifrado simple que se basa en la sustitución de cada letra del texto original por otra letra que se encuentra un número fijo de posiciones hacia adelante en el alfabeto.</p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+            <a class="btn btn-primary" href="cesar/cesar.html">Calcular</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="principal/Images/polybios.jfif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">POLYBIOS</h5>
+            <p class="card-text">Es un cifrado que utiliza una tabla para representar cada letra del alfabeto mediante un par de coordenadas. El griego Polibio, se le atribuye el desarrollo de esta técnica</p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+            <a class="btn btn-primary" href="polybios/polybios.html">Calcular</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="principal/Images/beaufort.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BEAUFORT</h5>
+            <p class="card-text">Es un cifrado polialfabético que fue desarrollado en el siglo XIX , es similar al del Vigenere lo que significa que utiliza múltiples claves de cifrado a lo largo del texto</p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+            <a class="btn btn-primary" href="beaufort/beaufort.html">Calcular</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="principal/Images/Lester S..PNG" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">HILL</h5>
+            <p class="card-text">El cifrado Hill, creado por Lester S. Hill en 1929, usa matrices para cifrar bloques de texto. Se representa cada letra como un número, se agrupan en bloques y se multiplican por una matriz clave. La seguridad depende de la elección de la matriz clave.</p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+            <a class="btn btn-primary" href="Hill/hill.html">Calcular</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="principal/Images/aes.PNG" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">AES</h5>
+            <p class="card-text">El cifrado AES, creado por Vincent Rijmen y Joan Daemen, es un estándar de cifrado simétrico desde 2001. Opera en bloques de 128 bits y admite claves de 128, 192 o 256 bits. Utiliza diversas operaciones, como sustitución de bytes y mezcla de columnas, para cifrar datos de manera segura. Ampliamente empleado en comunicaciones y almacenamiento de datos, el AES destaca por su seguridad y eficiencia.</p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+            <a class="btn btn-primary" href="AES/cifradoAES.html">Calcular</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="principal/Images/Vigenere.jfif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">VIGENERE</h5>
+            <p class="card-text">Fue inventado por el criptógrafo francés Blaise de Vigenère en el siglo XVI y es considerado uno de los primeros ejemplos de cifrado polialfabético.</p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+            <a class="btn btn-primary" href="Vigenere/vigenere.html">Calcular</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ---------------------------------------------------------------------------------------------------->
+
+  <footer>
+      <p>&copy; 2023 - Grupo 7 todos los derechos reservados.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
