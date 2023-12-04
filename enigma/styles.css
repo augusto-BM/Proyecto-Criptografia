@@ -1,0 +1,48 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  width: 90%;
+  max-width: 20rem;
+  background: white;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+.input {
+  border: 1px solid rgb(153, 151, 151);
+}
+.input,
+button {
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+button {
+  border-radius: 1rem;
+  font-family: "Poppins", sans-serif;
+  border: 0;
+  background: rgb(0, 91, 228);
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background: rgb(0, 91, 228);
+}
+.btn_cambiar {
+  background: white;
+  color: rgb(0, 91, 228);
+  border: rgb(0, 91, 228) 1px solid;
+}
+.btn_cambiar:hover {
+  background: rgb(74, 136, 230);
+  color: white;
+}
