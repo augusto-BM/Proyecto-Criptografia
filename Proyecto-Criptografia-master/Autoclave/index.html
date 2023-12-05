@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cifrado Autoclave</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Cifrado Autoclave</h1>
+        <label for="texto">Texto:</label>
+        <textarea id="texto" rows="4"></textarea>
+        <label for="clave">Clave:</label>
+        <input type="text" id="clave">
+        <label for="alfabeto">Alfabeto:</label>
+        <select id="alfabeto">
+            <option value="26">26 caracteres</option>
+            <option value="27">27 caracteres</option>
+        </select>
+        <button onclick="cifrar()">Cifrar</button>
+        <button onclick="descifrar()">Descifrar</button>
+        <label for="resultado">Resultado:</label>
+        <textarea id="resultado" rows="4" readonly></textarea>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
