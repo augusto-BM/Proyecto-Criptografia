@@ -4,8 +4,15 @@ body {
   padding: 0;
   margin: 0;
 }
+.main {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+  margin-top: 10rem;
+}
 .title {
   font-size: 30px;
+  width: 10rem;
 }
 .contenedor {
   display: flex;
@@ -13,13 +20,11 @@ body {
   gap: 1rem;
   padding: 2rem;
   margin: auto;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   left: 0;
   right: 0;
   width: 90%;
   max-width: 20rem;
+
   background: white;
   border: 1px solid black;
   border-radius: 1rem;
@@ -50,4 +55,7 @@ body {
 .btn_cambiar:hover {
   background: rgb(74, 136, 230);
   color: white;
+}
+.img-ej {
+  width: 40rem;
 }
