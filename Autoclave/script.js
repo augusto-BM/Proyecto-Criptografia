@@ -1,39 +1,69 @@
 function cifrar() {
-    const texto = document.getElementById('texto').value.toUpperCase();
+    const mensaje = document.getElementById('mensaje').value.toUpperCase();
     const clave = document.getElementById('clave').value.toUpperCase();
-    const alfabetoSize = parseInt(document.getElementById('alfabeto').value, 10);
-    let resultado = '';
+    const modulo = parseInt(document.getElementById('modulo').value);
 
-    for (let i = 0; i < texto.length; i++) {
-        if (/[A-Z]/.test(texto[i])) {
-            const textoCharCode = texto.charCodeAt(i) - 65;
-            const claveCharCode = clave.charCodeAt(i % clave.length) - 65;
-            const nuevoCharCode = (textoCharCode + claveCharCode) % alfabetoSize + 65;
-            resultado += String.fromCharCode(nuevoCharCode);
-        } else {
-            resultado += texto[i];
-        }
+    const moduloAlphabet = generarAlfabeto(modulo);
+
+    let result = '';
+
+    for (let i = 0; i < mensaje.length; i++) {
+        const mensajeChar = mensaje.charAt(i);
+        const claveChar = clave.charAt(i % clave.length);
+
+        const mensajeNum = letraAValor(mensajeChar, moduloAlphabet);
+        const claveNum = letraAValor(claveChar, moduloAlphabet);
+
+        const resultadoNum = (mensajeNum + claveNum) % modulo;
+        result += `<span class="char">${valorALetra(resultadoNum, moduloAlphabet)}</span>`;
     }
 
-    document.getElementById('resultado').value = resultado;
+    document.getElementById('resultado').innerHTML = result;
 }
 
 function descifrar() {
-    const texto = document.getElementById('texto').value.toUpperCase();
+    const mensaje = document.getElementById('mensaje').value.toUpperCase();
     const clave = document.getElementById('clave').value.toUpperCase();
-    const alfabetoSize = parseInt(document.getElementById('alfabeto').value, 10);
-    let resultado = '';
+    const modulo = parseInt(document.getElementById('modulo').value);
 
-    for (let i = 0; i < texto.length; i++) {
-        if (/[A-Z]/.test(texto[i])) {
-            const textoCharCode = texto.charCodeAt(i) - 65;
-            const claveCharCode = clave.charCodeAt(i % clave.length) - 65;
-            const nuevoCharCode = (textoCharCode - claveCharCode + alfabetoSize) % alfabetoSize + 65;
-            resultado += String.fromCharCode(nuevoCharCode);
+    const moduloAlphabet = generarAlfabeto(modulo);
+
+    let result = '';
+
+    for (let i = 0; i < mensaje.length; i++) {
+        const mensajeChar = mensaje.charAt(i);
+        const claveChar = clave.charAt(i % clave.length);
+
+        const mensajeNum = letraAValor(mensajeChar, moduloAlphabet);
+        const claveNum = letraAValor(claveChar, moduloAlphabet);
+
+        let resultadoNum;
+        if (mensajeNum >= claveNum) {
+            resultadoNum = (mensajeNum - claveNum + modulo) % modulo;
         } else {
-            resultado += texto[i];
+            resultadoNum = (mensajeNum - claveNum) % modulo;
         }
+
+        result += `<span class="char">${valorALetra(resultadoNum, moduloAlphabet)}</span>`;
     }
 
-    document.getElementById('resultado').value = resultado;
+    document.getElementById('resultado').innerHTML = result;
+}
+
+function letraAValor(letra, alfabeto) {
+    return alfabeto.indexOf(letra);
+}
+
+function valorALetra(valor, alfabeto) {
+    return alfabeto[valor];
+}
+
+function generarAlfabeto(modulo) {
+    if (modulo === 26) {
+        return 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    } else if (modulo === 27) {
+        return 'A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z'.split(' ');
+    } else {
+        throw new Error('Modulo no soportado');
+    }
 }
