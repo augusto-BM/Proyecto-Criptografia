@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="rot13.css">
-    <link
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../principal/index.css">
+  <link rel="stylesheet" type="text/css" href="rot13.css">
+  <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css"
       integrity="sha512-fRVSQp1g2M/EqDBL+UFSams+aw2qk12Pl/REApotuUVK1qEXERk3nrCFChouag/PdDsPk387HJuetJ1HBx8qAg=="
@@ -12,18 +13,96 @@
       referrerpolicy="no-referrer"
     />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Cifrado Rot 13</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>CIFRADO DE ROT13</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Cifrado rot 13</h1>
-        <label for="texto">Texto:</label>
-        <textarea id="texto" rows="4"></textarea>
-        <button onclick="encriptar()">Cifrar</button>
-        <button onclick="descencriptar()">Descifrar</button>
-        
-        <a  href="../index.html">Atras</a>
+
+    <header>
+      <h1>Grupo 7</h1>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="cesar.html"><b>GRUPO 7</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contactenos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ---------------------------------------------------------------------------------------------------->
+    <div class="titutlo-a">
+      <h5 class="titulo-criptografia">CIFRADO DE ATBASH<br><i>Elije el alfabeto a utilizar.</i></h1>
     </div>
-    <script src="rot13.js"></script>
-</body>
+
+    <div class="container continer_form">
+    
+      <div class="row div_form_row">
+        
+        <div class="col div_form_col">
+               <!-- Grupo: Tipo de usuario -->
+               <div class="formulario__grupo 11" id="grupo__user_type">
+                  <label for="user_type" class="label_select">Tipo de alfabeto</label>
+                  <div class="formulario__grupo-input">
+                      <select name="user_type" class="select__input" name="user_type" id="slcIdioma">
+                          <option value="0">Ingles</option>
+                          <option value="1">Español</option>
+                      </select>
+                  </div>
+              </div>
+          <div class="row"> 
+            <div class="form-container">
+              <h3 class="titulo-Formulario">CIFRADO / DESCIFRADO</h3>
+              <main  class="formulario" id="formulario">
+                
+                <!-- Grupo: Texto -->
+                <div class="formulario__grupo 2" id="grupo__dni_cliente">
+                  <div class="formulario__grupo-input">
+                    <input type="text" rows="4" id="texto" class="formulario__input"  placeholder=" " autofocus required>
+                              <label for="dni_cliente" class="formulario__label">MENSAJE</label>
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                </div>
+            
+                <div class="formulario__grupo formulario__grupo-btn-enviar 13">
+                  <input type="button" class="formulario__btn btn btn-default"  value="Cifrar" id="enviar" onclick="encriptar() "></input>
+                  <input type="button" class="formulario__btn btn btn-default"  value="Descifrar" id="enviar" onclick="descencriptar()"></input>
+                </div>
+                <div class="tienes-cuenta">
+                  
+                  &emsp;&emsp;&emsp;<p id="resultado" class="resultado"></p>
+                </div>
+              </main>           
+              
+            </div>
+          </div>
+          <br>
+        </div>
+        <div class="col">
+          <img src="../principal/Images/rot13.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2023 - Grupo 7 todos los derechos reservados.</p>
+    </footer>
+    <script src="rot13.js"></script> 
 </html>
