@@ -28,6 +28,8 @@ body {
   background: white;
   border: 1px solid black;
   border-radius: 1rem;
+  margin-top: -70px;
+  margin-bottom: 100px;
 }
 .input {
   border: 1px solid rgb(153, 151, 151);
@@ -57,5 +59,9 @@ body {
   color: white;
 }
 .img-ej {
+  
   width: 40rem;
+}
+.container-imag{
+  margin-top: -200px !important;
 }
